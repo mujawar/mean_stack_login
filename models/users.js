@@ -5,9 +5,7 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
-
 //user schema
-
 var UserSchema = mongoose.Schema({
     username:{
         type:String,
@@ -31,7 +29,6 @@ module.exports.createUser = function (newUser,callback) {
         bcrypt.hash(newUser.password, salt, function(err, hash) {
             newUser.password = hash;
             newUser.save(callback);
-
         });
     });
 }
@@ -50,7 +47,6 @@ module.exports.comparePassword = function (candidatePassword,hash,callback) {
 
     });
 }
-
 
 module.exports.getUserById = function (id,callback) {
     User.findById(id,callback)
