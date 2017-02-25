@@ -6,6 +6,7 @@
   "scripts": {
     "test":"echo \"Error:no test specified\" && exit 1"
   },
+  
   "author":"arif mujawar",
   "license": "ISC",
   "dependencies": {
@@ -23,6 +24,5 @@
     "passport":"*",
     "passport-http":"*",
     "passport-local":"*"
-
   }
 }
