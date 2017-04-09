@@ -1,7 +1,6 @@
 /**
  * Created by arif on 27/11/16.
  */
-
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -78,8 +77,6 @@ app.use(function (req, res, next) {
     res.locals.user = req.user || null;
     next()
 });
-
-
 app.use('/', routes);
 app.use('/users', users);
 
